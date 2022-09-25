@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Functions</title>
+  </head>
+  <body>
+    <h1>Functions Quiz</h1>
+    <h2 id="score"></h2>
+    <h3><a href="./index.html">Go Back</a></h3>
+
+    <script>
+      const people = ["bob", "Ross", "Dylan", "Zack", "Allie", "Andrea"];
+
+      people.forEach((name, index) =>
+        console.log(`Name at position ${index} is ${name}\n`)
+      );
+
+      const quiz = [
+        ["What is Batman's real name?", "Bruce Wayne"],
+        ["What is The Flash's real name?", "Barry Allen"],
+        ["What is Spiderman's real name?", "Peter Parker"],
+      ];
+
+      function start(quiz) {
+        let score = 0;
+        let pageScore = document.getElementById("score");
+
+        // main game loop
+        for (const [question, answer] of quiz) {
+          const response = ask(question);
+          check(response, answer);
+        }
+
+        // end of main game loop
+        gameOver();
+
+        // function declarations
+        function ask(question) {
+          return prompt(question);
+        }
+        // Check to see if answer is correct
+        function check(response, answer) {
+          if (response === answer) {
+            alert("Correct!");
+            score++;
+          } else {
+            alert(`Wrong! The correct answer was ${answer}`);
+          }
+        }
+
+        function gameOver() {
+          alert(
+            `Game Over, you scored ${score} point${score !== 1 ? "s" : ""}`
+          );
+          pageScore.innerHTML = `Your final Score was: ${score}`;
+        }
+      }
+      start(quiz);
+    </script>
+  </body>
+</html>

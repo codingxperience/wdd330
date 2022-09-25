@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Array Quiz</title>
+  </head>
+  <body>
+    <h1>Array Questionaire</h1>
+    <h2 id="score"></h2>
+    <h3><a href="./index.html">Go Back</a></h3>
+
+    <script>
+      const quiz = [
+        ["What is Superman's real name?", "Clark Kent"],
+        ["What is Wonder Woman's real name?", "Diana Prince"],
+        ["What is Batman's real name?", "Bruce Wayne"],
+      ];
+      let score = 0;
+
+      for (const [question, answer] of quiz) {
+        const response = prompt(question);
+        if (response === answer) {
+          alert("Correct!");
+          score++;
+        } else {
+          alert(`Wrong! The correct answer was ${answer}`);
+        }
+      }
+      alert(`Game Over, you scored ${score} point${score !== 1 ? "s" : ""}`);
+      let pageScore = document.getElementById("score");
+      pageScore.innerHTML = `Your final Score was: ${score}`;
+    </script>
+  </body>
+</html>
