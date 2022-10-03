@@ -1,12 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events Examples</title>
+    <style>
+      div {
+        font-size: 1.3em;
+      }
+      button {
+        background-color: teal;
+        padding: 10px;
+        border-radius: 15px;
+        font-size: 1.2em;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Events Example</h1>
+    <button id="btn">click me to show in console!</button>
+    <h3>addEventListener("click", showNumber)</h3>
+    <div>You clicked: <span id="display">0</span> times</div>
+    <div>
+      <br />
+      The event listener takes an event a "click" for example,<br />
+      then fires an event for example a function that displays a counter
+    </div>
+
+    <script>
+      let btn = document.getElementById("btn");
+      let displayNum = document.getElementById("display");
+      let counter = 0;
+
+      function showNumber() {
+        counter++;
+        displayNum.innerHTML = counter;
+        console.log(counter);
+      }
+
+      btn.addEventListener("click", showNumber);
+    </script>
+  </body>
 </html>

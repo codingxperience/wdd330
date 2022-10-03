@@ -1,12 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Objects|DOM|Events</title>
-</head>
-<body>
-  
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Objects|DOM|Events Notes</title>
+    <style>
+      .this_paragraph {
+        width: 200px;
+        margin-left: 30px;
+        background-color: lightseagreen;
+        padding: 15px;
+        border-radius: 15px;
+        font-size: 1.3em;
+      }
+      .objectTest {
+        width: 250px;
+        height: 325px;
+        background-color: #e35;
+        border-radius: 15px;
+        margin: 15px;
+        padding: 10px;
+        padding-right: 5px;
+      }
+      .container {
+        display: flex;
+        flex-direction: row;
+      }
+      .objectTest a {
+        font-size: 1.2em;
+        color: azure;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Week 03 Notes</h1>
+
+    <div class="container">
+      <p class="this_paragraph">
+        This reference gets the current object when you reference this without
+        adding it after the forEach function it will reference the current
+        function which is the showTags method,<br />
+        which will in turn not reference the title like we want,<br />
+        you have to add this after the showTags method will reference the
+        previous object which is the video constant you see.
+      </p>
+      <div class="objectTest">
+        <h3>const video = {</h3>
+        <h3>title: "hello world",</h3>
+        <h3>tags: ["a", "c", "b"],</h3>
+        <h3>
+          showTags() { this.tags.forEach((tag) => { console.log(this.title,
+          tag); }, this);
+        </h3>
+        <h3>},</h3>
+        <h3>video.showTags();</h3>
+      </div>
+      <div class="this_paragraph">
+        Please check into the test.js file provided inside this html file. It
+        has multiple other examples which will explain more about the global and
+        scoped versions of the "This" keyword.
+      </div>
+      <div class="this_paragraph">
+        The other part is that this encompasses Objects as well and includes a
+        bit of understanding that objects are created using the new keyword.
+        Objects can include functions, key value pairs, properties, and
+        constructors.
+      </div>
+      <div class="objectTest">
+        <a href="events.html">Events examples page</a>
+      </div>
+    </div>
+  </body>
+  <script src="test.js"></script>
+  <script>
+    // This keyword references the current object that is executing the current function
+    // method(this) -> object
+    // function(this) -> global (window, global objects in node)
+
+    let user = {
+      name: "John",
+      age: 30,
+
+      sayHi() {
+        // "this" is the "current object"
+        console.log(this.name);
+      },
+    };
+
+    user.sayHi(); // John
+
+    // this reference gets the current object
+    // when you reference this without adding it after the forEach function
+    // it will reference the current function which si the showTags method,
+    // which will in turn not reference the title like we want, you have to add
+    // this after the showTags method will reference the previous object which is the
+    // video constant you see.
+    const video = {
+      title: "hello world",
+      tags: ["a", "c", "b"],
+      showTags() {
+        this.tags.forEach((tag) => {
+          console.log(this.title, tag);
+        }, this);
+      },
+    };
+
+    video.showTags();
+
+    // video.stop = function () {
+    //   console.log(this);
+    // };
+
+    // video.stop();
+
+    // global this keyword.
+    // function playVideo() {
+    //   console.log(this);
+    // }
+
+    // playVideo();
+
+    function Video(title) {
+      this.title = title;
+      console.log(this);
+    }
+
+    // the context here is that you have a video function
+    // that will take in a title as a parameter
+    // then using this references the object Video = {}
+    // this will reference this new object which using the new keyword
+    // will allow you to reference the title inside the object
+    // const v = new Video("Hi");
+  </script>
 </html>
