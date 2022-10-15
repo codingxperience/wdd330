@@ -4,20 +4,28 @@ const links = [
     url: "week01-notes/index.html"
   },
   {
-    label: "Week01 Code",
-    url: "week01-code/index.html"
+    label: "Week01",
+    url: "week01/index.html"
   },
   {
-    label: "Week02 Code",
-    url: "week02-code/index.html"
+    label: "Week02",
+    url: "week02/index.html"
   },
   {
-    label: "Week03 Code",
-    url: "week03-code/index.html"
+    label: "Week03",
+    url: "week03/index.html"
   },
   {
-    label: "Week04 Code",
+    label: "Week04",
     url: "week04/index.html"
+  },
+  {
+    label: "Week05",
+    url: "week05/debug.html"
+  },
+  {
+    label: "Week06",
+    url: "week06/index.html"
   }
 ]
 
