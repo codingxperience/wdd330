@@ -11,7 +11,10 @@
 <body>
   <h1>Todos</h1>
   <div>
-    <input type="text"><button>+</button>
+    <input type="text"><button onclick="addItem()" >+</button>
+    <form action="" id="search-books">
+      <input type="text" placeholder="search">
+    </form>
   </div>
   <div id="items-container">
     <ul class="list"></ul>
@@ -22,6 +25,8 @@
       <li>Completed</li>
     </ul-->
   </div>
+  <button onclick="showComplete()">Show All</button>
+  <button onclick="toggleClock()" >Hide</button>
   <script src="./to-do.js"></script>
 </body>
 </html>
