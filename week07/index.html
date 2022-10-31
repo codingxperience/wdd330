@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <title>Week 07 Notes</title>
+  </head>
+  <body>
+    <h1>Week 07 Notes</h1>
+    <ol class="gradient-list">
+      <li>
+        Inside the first section about additoinal functions they include
+        information about using constants and passing those to functions, such
+        as an object.
+        <code>const clark = {name: 'clark'}</code>
+        <code>hello(clark)</code>
+      </li>
+      <li>
+        Something that I thought was great was the immediate invoke of functions
+        in this method below which allows to run a function immediately:
+        <code
+          >(function(){ const temp = "world"; console.log(`hello ${temp}`);
+          })();
+        </code>
+      </li>
+      <li>
+        self contained blocks which are code blocks that can run independant of
+        each other.
+        <code
+          >(function() { // block A const name = 'Block A'; console.log(`Hello
+          from ${name}`); }()); (function() { // block B const name = 'Block B';
+          console.log(`Hello from ${name}`); }());</code
+        >
+      </li>
+      <li>
+        I want to learn more about recursive functions where they invoke
+        themselves till a condition is met.
+      </li>
+      <li>
+        Another great tool is Ajax and fetch to get data from an API and you can
+        pass it into an object and use that data or display it to the user.
+      </li>
+      <li>
+        You can use fetch in this manner:<br />
+        <code>const url = "urlcode"; </code>
+        <code
+          ><br />fetch(url)<br />.then(res => res.json()).then(quiz =>
+          {view.start.addEventListener("click", () =>
+          game.start(quiz.questions), false);</code
+        >
+      </li>
+    </ol>
+    <h3><a href="./team07/index.html">Link to team project</a></h3>
+  </body>
+</html>
