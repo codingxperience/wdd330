@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Local Quakes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./index.js" type="module"></script>
+  </head>
+
+  <body>
+    <img src="image/earthquark-image.png" alt="background-image" class="background">
+    <main>
+      <h1>Quake List</h1>
+      <form id="form">
+        <label>Radius <input type="number" id="radius" /></label>
+        <button>Submit</button>
+      </form>
+
+      <ul id="quakeList"></ul>
+      <ul id="quakeDetails"></ul>
+    </main>
+  </body>
+</html>

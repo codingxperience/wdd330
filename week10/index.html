@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../style.css" rel="stylesheet" />
+    <title>Week 10 Notes</title>
+  </head>
+  <body>
+    <main>
+      <ol class="gradient-list">
+        <h1>Week 10 Notes</h1>
+        <li>Using the fetch method, you can use it to get other APIs</li>
+        <li>
+          You can put the data you get from the fetch method into an object to
+          allow you to manipulate the data and display it on a website.
+        </li>
+        <li>
+          You can set different headers when you use HTTP requests such as:
+          <pre>
+            const content = 'Hello World';
+            const myHeaders = new Headers();
+            myHeaders.append('Content-Type', 'text/plain');
+            myHeaders.append('Content-Length', content.length.toString());
+            myHeaders.append('X-Custom-Header', 'ProcessThisImmediately');
+            </pre
+          >
+        </li>
+        <li>
+          You can also upload data as well as files when you're making HTTP
+          requests with Async functions.
+        </li>
+
+        <li>
+          When it comes to form data, it can go through a process called
+          Client-side validation that checks if the information input is valid.
+        </li>
+        <li>
+          form validation can allow you to set required fields that the user
+          must fill to pass the form to the backend.
+        </li>
+        <li>
+          Things that you can set field required are passwords, text fields, and
+          more.
+        </li>
+        <li>
+          you can use styles to set on inputs when a field is invalid, such as a
+          red border and more, a green one when the field is correct and more.
+        </li>
+        <li><a href="./team10/index.html">W10 Team Activity</a></li>
+      </ol>
+    </main>
+  </body>
+</html>
