@@ -5,7 +5,7 @@
     "price":109.95,
     "description":"The Integra SL-X can be used on patients of all ages, and includes multiple safety features.",
     "category":"monitoring",
-    "image": "./images/anesthesia-machines.png",
+    "image": "images/anesthesia-machines.png",
     "rating":{"rate":3.9,"count":120}
   },
   {
@@ -14,7 +14,7 @@
     "price":22.3,
     "description":"16-slice CT Scanner performs in a wide variety of applications while delivering enhanced comfort.",
     "category":"medical surgical",
-    "image": "./images/ct-scanners.png",
+    "image": "images/ct-scanners.png",
     "rating":{"rate":4.1,"count":259}
   },
   {
@@ -23,7 +23,7 @@
     "price":55.99,
     "description":"Linear Accelerators with IMRT/IGRT delivery capabilities.",
     "category":"monitoring",
-    "image": "./images/linear-accelerators.png",
+    "image": "images/linear-accelerators.png",
     "rating":{"rate":4.7,"count":500}
   },
   {
@@ -32,7 +32,7 @@
     "price":75.99,
     "description":"The Philips IntelliVue MX550 delivers comprehensive patient information at a glance.",
     "category":"monitoring",
-    "image": "./images/patient-monitors.png",
+    "image": "images/patient-monitors.png",
     "rating":{"rate":2.1,"count":430}
   },
   {
@@ -41,7 +41,7 @@
     "price":75.99,
     "description":"Conmed's System 5000™ Electrosurgical Generator (ESU) provides the flexibility to fine tune the electrosurgical unit to specific procedures and surgeon preferences.",
     "category":"Medical surgical",
-    "image": "./images/electrosurgical-units.jpg",
+    "image": "images/electrosurgical-units.jpg",
     "rating":{"rate":2.1,"count":430}
   },
   {
@@ -50,7 +50,7 @@
     "price":45.99,
     "description":"The Maxx Luxx LED 160 is an advanced, cost-efficient surgery lighting system. It offers an exceptional 160,000 lux and a rich, adjustable color temperature.",
     "category":"Medical surgical",
-    "image": "./images/surgical-lights.jpg",
+    "image": "images/surgical-lights.jpg",
     "rating":{"rate":2.1,"count":430}
   }
 ]
