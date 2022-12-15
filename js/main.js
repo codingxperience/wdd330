@@ -50,9 +50,11 @@ const links = [
   {
     label: "Week11", 
     url: "week11/index.html"
+  },
+  {
+    label: "Week12 project",
+    url: "week12/final-project/index.html",
   }
-  
-   
 ]
 
 function loadIndex() {
